@@ -7,21 +7,60 @@ body {
   font-family: Arial, sans-serif;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.header,
-.footer {
-  height: 70px;
-  color: #ffffff;
-  background-color: #2487c6;
-}
 .content {
   flex-grow: 1;
   background-color: #f7f7f7;
   padding: 12px;
   max-width: 800px;
   margin: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 3em;
+  color: #ffffff;
+  background-color: #8d1a40;
+}
+
+.footer{
+  color: #ffffff;
+  background-color: #8d1a40;
+  height: 2em;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+    display: flex; 
+    align-items: center; 
+    padding-left: 1.5%;
+    padding-right: 1.5%;
+  }
+
+ul{
+  display: flex;
+  Flex-direction: row;
+  list-style-type: none;
+}
+
+li{
+  padding: 1em; 
+}
+
+nav a:focus,
+nav a:hover,
+nav a:active {    
+  text-decoration: underline;
+}
+
+#logo{
+  width: 5em;
 }

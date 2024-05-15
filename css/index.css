@@ -1,1 +1,25 @@
 /* CSS Code, den es für die Start Page braucht */
+
+
+.kachel-flex-container{
+  display: flex;
+  Flex-direction: row;
+  align-items: center;
+}
+
+.kachel-flex-container > div {
+  padding: 2em;
+  justify-content: center;
+  text-align: center;
+}
+
+.sortiment-flex-container{
+  Flex-direction: wrap;
+  align-items: center;
+}
+
+.sortiment-flex-container > div {
+  padding: 2em;
+  justify-content: center;
+  text-align: center;
+}
