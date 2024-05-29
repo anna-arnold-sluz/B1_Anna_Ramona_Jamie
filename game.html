@@ -53,7 +53,46 @@
     </div>
   </div>
   <div class="footer">Dies ist nur ein Schulprojekt.</div>
+
+  <form>
+    <div id="formAddress">
+      <label for="address">Anrede*</label><br>
+      <input type="radio" id="male" name="address" value="Herr">
+      <label for="male">Herr</label><br>
+      <input type="radio" id="female" name="address" value="Frau">
+      <label for="male">Frau</label><br>
+      <input type="radio" id="diverse" name="address" value="Divers">
+      <label for="male">Divers</label><br>
+    </div>
+    <div id="formName">
+      <div id="formFirstName">
+        <label for="firstName">Vorname*</label><br>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div id="formLastName">
+        <label for="lastName">Nachname*</label><br>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+    </div>
+    <div id="formContact">
+      <div id="formEmail">
+        <label for="email">E-Mail*</label><br>
+        <input type="text" id="email" name="email" required>
+      </div>
+      <div id="formPhone">
+        <label for="phone">Telefon*</label><br>
+        <input type="text" id="phone" name="phone" required>
+      </div>
+    </div>
+
+    <div id="formSubmit">
+      <input type="submit" id="submitButton" name="submitButton" value="Submit">
+    </div>
+  </form>
+  <script src="./js/databaseClient.js"></script>
+  <script src="./js/formValidation.js"></script>
   <script src="./js/game.js"></script>
+
 </body>
 
 </html>
