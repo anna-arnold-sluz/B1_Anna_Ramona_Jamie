@@ -1,25 +1,43 @@
-/* CSS Code, den es für die Start Page braucht */
-
-
-.kachel-flex-container{
+.movie-finder-game-flex-container{
   display: flex;
-  Flex-direction: row;
+  flex-direction: row;
   align-items: center;
 }
 
-.kachel-flex-container > div {
+.movie-finder-game-flex-container > div {
   padding: 2em;
   justify-content: center;
   text-align: center;
 }
 
-.sortiment-flex-container{
-  Flex-direction: wrap;
+.assortment-flex-container{
+  display:flex;
+  flex-direction: row;
   align-items: center;
 }
 
-.sortiment-flex-container > div {
-  padding: 2em;
+.assortment-flex-container > div {
+  padding: 1em;
   justify-content: center;
   text-align: center;
+  min-width: 10%;
+}
+
+.images-categories{
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .movie-finder-game-flex-container {
+    flex-direction:column;
+  }
+  .assortment-flex-container{
+    flex-direction:column;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .assortment-flex-container{
+    flex-direction:column;
+  }
 }

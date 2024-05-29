@@ -20,12 +20,6 @@ body {
   flex-direction: column;
 }
 
-.header {
-  height: 3em;
-  color: #ffffff;
-  background-color: #8d1a40;
-}
-
 .footer{
   color: #ffffff;
   background-color: #8d1a40;
@@ -33,21 +27,21 @@ body {
   display: flex; 
   align-items: center;
   justify-content: center;
-
 }
 
 .header{
   display: flex;
   justify-content: space-between;
-    display: flex; 
-    align-items: center; 
-    padding-left: 1.5%;
-    padding-right: 1.5%;
+  align-items: center; 
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  height: 3em;
+  background-color: #d4d4d4;
   }
 
 ul{
   display: flex;
-  Flex-direction: row;
+  flex-direction: row;
   list-style-type: none;
 }
 
@@ -59,6 +53,7 @@ nav a:focus,
 nav a:hover,
 nav a:active {    
   text-decoration: underline;
+  color:#000000;
 }
 
 #logo{
