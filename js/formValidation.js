@@ -4,27 +4,24 @@ const formContainer = document.getElementById("formContainer");
 const gameContainer = document.getElementById("game-container");
 submitButton.disabled = true;
 const emailField = document.getElementById("email");
+const firstNameField = document.getElementById("firstName");
+const lastNameField = document.getElementById("lastName");
+const phoneField = document.getElementById("phone");
+const addressField = document.getElementById("address");
 
-emailField.addEventListener("keyup", () => {
-  onChangeEmailField();
-});
+
+
 submitButton.addEventListener("click", async (event) => {
   event.preventDefault();
   onClickSubmit();
 });
 
-// Interaktionen Code: 
-const onChangeEmailField = () => {
-  if (emailField.value === "") {
-    submitButton.disabled = true;
-  } else {
-    submitButton.disabled = false;
-  }
-};
+
 
 const onClickSubmit = async () => {
+  validateForm()
   // Speichert die Daten in der Datenbank
-  await databaseClient.insertInto("user", {
+  await databaseClient.insertInto("game", {
     email: emailField.value,
     firstName: firstNameField.value,
     lastName: lastNameField.value,
