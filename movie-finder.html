@@ -26,7 +26,88 @@
   </header>
   <div class="content">
   </div>
+  <div class="content">
+    <div id="formContainer">
+      <div>Fülle alle Felder aus, um den perfekten Film zu finden.</div>
 
+      <form id="questionnaireForm">
+        <div>
+          <p>Welche Film-Kategorie schaust du am liebsten?</p>
+          <label><input type="radio" name="question1" value="Action" required /> Action</label>
+          <label><input type="radio" name="question1" value="Romantik" /> Romantik</label>
+          <label><input type="radio" name="question1" value="Krimi" /> Krimi</label>
+        </div>
+
+        <div>
+          <p>Welche Art von Film schaust du am liebsten?</p>
+          <label><input type="radio" name="question2" value="Anime" required /> Anime</label>
+          <label><input type="radio" name="question2" value="Real" /> Real</label>
+        </div>
+
+        <div>
+          <p>Auf welchem Medium schaust du Filme am liebsten?</p>
+          <label><input type="radio" name="question3" value="DVD" required /> DVD</label>
+          <label><input type="radio" name="question3" value="Phone" /> Phone</label>
+        </div>
+
+        <div>
+          <p>In welcher Sprache schaust du Filme am liebsten?</p>
+          <label><input type="radio" name="question4" value="Deutsch" required /> Deutsch</label>
+          <label><input type="radio" name="question4" value="Mandarin" /> Mandarin</label>
+        </div>
+
+        <div>
+          <input type="submit" id="submit" value="Absenden" />
+        </div>
+      </form>
+    </div>
+
+    <div id="resultContainer" class="hidden">
+      <h2>Dein perfekter Film ist:</h2>
+      <p id="result"></p>
+      <img id="resultImage" src="" alt="Film Poster" />
+    </div>
+  </div>
+
+  <div class="footer">footer</div>
+  <script src="./js/databaseClient.js"></script>
+  <script src="./js/userTable.js"></script>
+  <script src="./js/game.js"></script>
+  <script>
+    document.getElementById('questionnaireForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const form = event.target;
+      const question1 = form.question1.value;
+      const question2 = form.question2.value;
+      const question3 = form.question3.value;
+      const question4 = form.question4.value;
+
+      let filmRecommendation = '';
+      let filmImage = '';
+
+      if (question1 === 'Action' && question3 === 'DVD') {
+        filmRecommendation = 'Mad Max: Fury Road';
+        filmImage = './images/mad_max.jpg';
+      } else if (question3 === 'Phone' && question4 === 'Mandarin') {
+        filmRecommendation = 'Crouching Tiger, Hidden Dragon';
+        filmImage = './images/crouching_tiger.jpg';
+      } else if (question2 === 'Real' && question1 === 'Romantik') {
+        filmRecommendation = 'The Notebook';
+        filmImage = './images/the_notebook.jpg';
+      } else if (question2 === 'Anime' && question1 === 'Krimi') {
+        filmRecommendation = 'Death Note';
+        filmImage = './images/death_note.jpg';
+      } else {
+        filmRecommendation = 'Inception';
+        filmImage = './images/inception.jpg';
+      }
+
+      document.getElementById('result').innerText = filmRecommendation;
+      document.getElementById('resultImage').src = filmImage;
+      document.getElementById('formContainer').classList.add('hidden');
+      document.getElementById('resultContainer').classList.remove('hidden');
+    });
+  </script>
 
   <div class="footer">Dies ist nur ein Schulprojekt.</div>
   <script src="./js/game.js"></script>
