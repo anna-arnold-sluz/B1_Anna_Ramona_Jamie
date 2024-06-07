@@ -37,7 +37,7 @@ const onClickSubmit = async () => {
     }
     var firstNameValidation = document.forms["form"]["firstName"].value;
     if (firstNameValidation == null || firstNameValidation == "") {
-      document.forms["myForm"]["firstName"].classList.remove("hidden")
+      document.forms["form"]["firstName"].classList.remove("hidden")
       return false;
     }
     var emailValidation = document.forms["form"]["email"].value;
