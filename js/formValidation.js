@@ -13,19 +13,30 @@ submitButton.addEventListener("click", async (event) => {
   onClickSubmit();
 });
 
+const onClickSubmit = async () => {
+  if (!validateForm()) {
+    return
+  }
 
-
+  // Speichert die Daten in der Datenbank
+  await databaseClient.insertInto("game", {
+    email: emailField.value,
+    first_name: firstNameField.value,
+    last_name: lastNameField.value,
+    phone: phoneField.value,
+    address: addressField.value,
+  });
 
   //Datenvalidierung:
   function validateForm() {
-    var lastNameValidation = document.forms["form"]["lastName"].value;
-    if (lastNameValidation == null || lastNameValidation == "") {
-      alert("Last name must be filled out");
-      return false;
-    }
     var firstNameValidation = document.forms["form"]["firstName"].value;
     if (firstNameValidation == null || firstNameValidation == "") {
       document.forms["form"]["firstName"].classList.remove("hidden")
+      return false;
+    }  
+    var lastNameValidation = document.forms["form"]["lastName"].value;
+    if (lastNameValidation == null || lastNameValidation == "") {
+      alert("Last name must be filled out");
       return false;
     }
     var emailValidation = document.forms["form"]["email"].value;
@@ -79,16 +90,4 @@ function validatePhone(phone) {
     );
 };
 
-const onClickSubmit = async () => {
-  if (!validateForm()) {
-    return
-  }
 
-  // Speichert die Daten in der Datenbank
-  await databaseClient.insertInto("game", {
-    email: emailField.value,
-    first_name: firstNameField.value,
-    last_name: lastNameField.value,
-    phone: phoneField.value,
-    address: addressField.value,
-  });
