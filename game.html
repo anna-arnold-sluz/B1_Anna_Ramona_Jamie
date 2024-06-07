@@ -57,46 +57,46 @@
         Klicke auf das Spiel, um erneut zu spielen.
       </div>
     </div>
-  
 
-  <form id="form" class="hidden" onsubmit="onClickSubmit">
-    <div id="formAddress">
-      <label for="address" class="label">Anrede*</label><br>
-      <input type="radio" id="male" name="address" value="Herr">
-      <label for="male">Herr</label><br>
-      <input type="radio" id="female" name="address" value="Frau">
-      <label for="male">Frau</label><br>
-      <input type="radio" id="diverse" name="address" value="Divers">
-      <label for="male">Divers</label><br>
-    </div>
-    <div id="formName">
-      <div id="formFirstName">
-        <label for="firstName" class="label">Vorname*</label><br>
-        <input type="text" id="firstName" name="firstName">
-        <span class="error-message hidden" id="firstname-error">First name must be filled out</span>
-      </div>
-      <div id="formLastName">
-        <label for="lastName" class="label">Nachname*</label><br>
-        <input type="text" id="lastName" name="lastName">
-      </div>
-    </div>
-    <div id="formContact">
-      <div id="formEmail">
-        <label for="email" class="label">E-Mail*</label><br>
-        <input type="text" id="email" name="email">
-      </div>
-      <div id="formPhone">
-        <label for="phone" class="label">Telefon*</label><br>
-        <input type="text" id="phone" name="phone" onkeypress="addSpace()">
-      </div>
-    </div>
 
-    <div id="formSubmit">
-      <input type="submit" id="submitButton" name="submitButton" value="Submit">
-    </div>
-  </form>
+    <form id="form" class="hidden" onsubmit="onClickSubmit">
+      <div id="formAddress">
+        <label for="address" class="label">Anrede*</label><br>
+        <input type="radio" id="male" name="address" value="Herr">
+        <label for="male">Herr</label><br>
+        <input type="radio" id="female" name="address" value="Frau">
+        <label for="male">Frau</label><br>
+        <input type="radio" id="diverse" name="address" value="Divers">
+        <label for="male">Divers</label><br>
+      </div>
+      <div id="formName">
+        <div id="formFirstName">
+          <label for="firstName" class="label">Vorname*</label><br>
+          <input type="text" id="firstName" name="firstName">
+          <span class="error-message hidden" id="firstname-error">First name must be filled out</span>
+        </div>
+        <div id="formLastName">
+          <label for="lastName" class="label">Nachname*</label><br>
+          <input type="text" id="lastName" name="lastName">
+        </div>
+      </div>
+      <div id="formContact">
+        <div id="formEmail">
+          <label for="email" class="label">E-Mail*</label><br>
+          <input type="text" id="email" name="email">
+        </div>
+        <div id="formPhone">
+          <label for="phone" class="label">Telefon*</label><br>
+          <input type="text" id="phone" name="phone" onkeypress="addSpace()">
+        </div>
+      </div>
 
-</div>
+      <div id="formSubmit">
+        <input type="submit" id="submitButton" name="submitButton" value="Submit">
+      </div>
+    </form>
+
+  </div>
 
   <div class="footer">Dies ist nur ein Schulprojekt.</div>
 
@@ -104,4 +104,5 @@
   <script src="./js/formValidation.js"></script>
   <script src="./js/game.js"></script>
 </body>
+
 </html>
