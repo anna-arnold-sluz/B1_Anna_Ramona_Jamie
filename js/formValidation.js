@@ -13,19 +13,7 @@ submitButton.addEventListener("click", async (event) => {
   onClickSubmit();
 });
 
-const onClickSubmit = async () => {
-  if (!validateForm()) {
-    return
-  }
 
-  // Speichert die Daten in der Datenbank
-  await databaseClient.insertInto("game", {
-    email: emailField.value,
-    first_name: firstNameField.value,
-    last_name: lastNameField.value,
-    phone: phoneField.value,
-    address: addressField.value,
-  });
 
 
   //Datenvalidierung:
@@ -90,3 +78,17 @@ function validatePhone(phone) {
       /^\+\d{2} \d{2} \d{3} \d{2} \d{2}$/
     );
 };
+
+const onClickSubmit = async () => {
+  if (!validateForm()) {
+    return
+  }
+
+  // Speichert die Daten in der Datenbank
+  await databaseClient.insertInto("game", {
+    email: emailField.value,
+    first_name: firstNameField.value,
+    last_name: lastNameField.value,
+    phone: phoneField.value,
+    address: addressField.value,
+  });
