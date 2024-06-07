@@ -8,6 +8,8 @@ const background = document.getElementById("game-background");
 const gameOver = document.getElementById("game-end");
 const winnerText = document.getElementById("game-winner");
 const startScreen = document.getElementById("game-start");
+const form = document.getElementById("form");
+const game = document.getElementById("game");
 
 let gameLoopInterval = 0;
 const POINTS_TO_WIN = 100;
@@ -49,9 +51,7 @@ gameBox.addEventListener("click", () => {
 });
 
 window.addEventListener("keypress", () => {
-  console.log("hello");
   if (!dino.classList.contains("jump-animation")) {
-    console.log("juw");
     jump();
   }
 });
@@ -65,6 +65,8 @@ const stopGame = async () => {
   gameOver.classList.remove("hidden");
   if (Number(score.innerText) + 1 >= POINTS_TO_WIN) {
     winnerText.classList.remove("hidden");
+    game.classList.add("hidden");
+    form.classList.remove("hidden");
   }
 };
 

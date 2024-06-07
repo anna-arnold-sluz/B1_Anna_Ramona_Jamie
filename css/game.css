@@ -5,6 +5,10 @@
   display: none;
 }
 
+.header-text {
+  color: white;
+}
+
 /* Spiel-Container mit Beschreibung und Game-Over Text */
 .content-game {
   min-height: 600px;
@@ -154,23 +158,19 @@ form {
 #formEmail {
   margin-right: 1em;
 }
-#submitButton {
-  padding: 2%;
-  background-color: lightblue;
-  border: none;
-  border-radius: 10px;
-}
-#submitButton:hover {
-  background-color: navy;
-  color: white;
-  box-shadow: 0 0 10px 5px rgba(0,0,0,0.24);
-}
+
 input[type=text] {
   border: none;
   border: 2px solid black;
   border-radius: 5px;
   outline: none;
+  min-height: 2em;
 }
+
 input[type=text]:focus {
   border: 2px solid green;
+}
+
+.label {
+  font-weight: 800;
 }

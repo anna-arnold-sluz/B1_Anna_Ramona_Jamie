@@ -24,6 +24,12 @@
       </div>
     </nav>
   </header>
+  <div class="header-component">
+    <img class="header-image" src="images/header-game.jpg" alt="Hogwarts Express">
+    <div class="header-text">
+      <h1>Harry Potter Game</h1>
+    </div>
+  </div>
   <div class="content">
     <div id="game-container">
       <div class="game-info">
@@ -45,18 +51,17 @@
       <div id="game-end" class="hidden">
         <div id="game-winner" class="hidden">
           ⭐ ⭐ ⭐ Glückwunsch ⭐ ⭐ ⭐ <br />
-          Du hast mehr als 100 Punkte erzielt.
+          Du hast mehr als 100 Punkte erzielt. Fülle das Formular aus um am Wettbewerb teilzunehmen!
         </div>
         Das Spiel ist zu Ende.<br />
         Klicke auf das Spiel, um erneut zu spielen.
       </div>
     </div>
-  </div>
-  <div class="footer">Dies ist nur ein Schulprojekt.</div>
+  
 
-  <form>
+  <form id="form" class="hidden" onsubmit="onClickSubmit">
     <div id="formAddress">
-      <label for="address">Anrede*</label><br>
+      <label for="address" class="label">Anrede*</label><br>
       <input type="radio" id="male" name="address" value="Herr">
       <label for="male">Herr</label><br>
       <input type="radio" id="female" name="address" value="Frau">
@@ -66,22 +71,23 @@
     </div>
     <div id="formName">
       <div id="formFirstName">
-        <label for="firstName">Vorname*</label><br>
+        <label for="firstName" class="label">Vorname*</label><br>
         <input type="text" id="firstName" name="firstName">
+        <span class="error-message hidden" id="firstname-error">First name must be filled out</span>
       </div>
       <div id="formLastName">
-        <label for="lastName">Nachname*</label><br>
+        <label for="lastName" class="label">Nachname*</label><br>
         <input type="text" id="lastName" name="lastName">
       </div>
     </div>
     <div id="formContact">
       <div id="formEmail">
-        <label for="email">E-Mail*</label><br>
+        <label for="email" class="label">E-Mail*</label><br>
         <input type="text" id="email" name="email">
       </div>
       <div id="formPhone">
-        <label for="phone">Telefon*</label><br>
-        <input type="text" id="phone" name="phone">
+        <label for="phone" class="label">Telefon*</label><br>
+        <input type="text" id="phone" name="phone" onkeypress="addSpace()">
       </div>
     </div>
 
@@ -89,10 +95,13 @@
       <input type="submit" id="submitButton" name="submitButton" value="Submit">
     </div>
   </form>
+
+</div>
+
+  <div class="footer">Dies ist nur ein Schulprojekt.</div>
+
   <script src="./js/databaseClient.js"></script>
   <script src="./js/formValidation.js"></script>
   <script src="./js/game.js"></script>
-
 </body>
-
 </html>
