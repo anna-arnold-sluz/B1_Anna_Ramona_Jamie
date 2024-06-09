@@ -10,6 +10,7 @@ const winnerText = document.getElementById("game-winner");
 const startScreen = document.getElementById("game-start");
 const form = document.getElementById("form");
 const game = document.getElementById("game");
+const gameInfo = document.getElementById("game-info")
 
 let gameLoopInterval = 0;
 const POINTS_TO_WIN = 100;
@@ -65,6 +66,7 @@ const stopGame = async () => {
   gameOver.classList.remove("hidden");
   if (Number(score.innerText) + 1 >= POINTS_TO_WIN) {
     winnerText.classList.remove("hidden");
+    gameInfo.classList.add("hidden");
     game.classList.add("hidden");
     form.classList.remove("hidden");
   }
