@@ -27,16 +27,17 @@ const onClickSubmit = async () => {
     address: addressField.value,
   });
 
+
   //Datenvalidierung:
   function validateForm() {
-    var firstNameValidation = document.forms["form"]["firstName"].value;
-    if (firstNameValidation == null || firstNameValidation == "") {
-      document.forms["form"]["firstName"].classList.remove("hidden")
-      return false;
-    }  
     var lastNameValidation = document.forms["form"]["lastName"].value;
     if (lastNameValidation == null || lastNameValidation == "") {
       alert("Last name must be filled out");
+      return false;
+    }
+    var firstNameValidation = document.forms["form"]["firstName"].value;
+    if (firstNameValidation == null || firstNameValidation == "") {
+      document.forms["myForm"]["firstName"].classList.remove("hidden")
       return false;
     }
     var emailValidation = document.forms["form"]["email"].value;
@@ -89,5 +90,3 @@ function validatePhone(phone) {
       /^\+\d{2} \d{2} \d{3} \d{2} \d{2}$/
     );
 };
-
-
