@@ -91,6 +91,15 @@ nav a:active {
   color:#000000;
 }
 
+nav a{
+text-decoration: none;
+color: #8d1a40;
+}
+
+#navbar a.active {
+  color: black;
+}
+
 #logo{
   width: 5em;
 }
