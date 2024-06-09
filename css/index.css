@@ -36,7 +36,7 @@
   border-radius: 15px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
   .movie-finder-game-flex-container {
     flex-direction:column;
   }
@@ -45,7 +45,7 @@
   }
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1200px) {
   .assortment-flex-container{
     flex-direction:column;
   }
