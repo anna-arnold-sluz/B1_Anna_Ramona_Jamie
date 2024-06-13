@@ -10,7 +10,7 @@ const loserText = document.getElementById("game-loser");
 const startScreen = document.getElementById("game-start");
 const form = document.getElementById("form");
 
-const POINTS_TO_WIN = 1;
+const POINTS_TO_WIN = 100;
 let running = false;
 let movingUp = false;
 let movingDown = true;
