@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Movie Finder Resultat</title>
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/movie-finder.css" />
-</head>
-
-<body>
-    <header>
-        <nav class="header">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Movie Finder Resultat</title>
+      <link rel="stylesheet" href="./css/common.css" />
+      <link rel="stylesheet" href="./css/movie-finder.css" />
+   </head>
+   <body>
+      <header>
+         <nav class="header">
             <div>
-                <a href="index.html"><img id="logo" src="images/logo.png"></a>
+               <a href="index.html"><img id="logo" src="images/logo.png"></a>
             </div>
             <div>
-                <ul id="navbar">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="movie-finder.html" class="active">Movie Finder</a></li>
-                    <li><a href="game.html">Game</a></li>
-                </ul>
+               <ul id="navbar">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="movie-finder.html" class="active">Movie Finder</a></li>
+                  <li><a href="game.html">Game</a></li>
+               </ul>
             </div>
-        </nav>
-    </header>
-    <div class="header-component">
-        <img class="header-image" src="images/Movie-Finder.jpg" alt="Filmrollen">
-        <div class="header-text">
-            <h1>Movie World</h1>
-            <h3>Eine Welt, wo Klassiker zu Abenteuer werden!</h3>
-        </div>
-    </div>
-    <div class="content">
-        <div id="result">
+         </nav>
+      </header>
+      <div class="header-component">
+         <img class="header-image" src="images/header-movie-finder.jpg" alt="Filmrollen">
+         <div class="header-text">
+            <h1>Movie Finder</h1>
+         </div>
+      </div>
+      <div class="content">
+         <div id="result">
             <h3>Dein perfekter Film ist:</h3>
             <p id="movieRecommendation"></p>
-        </div>
-    </div>
-    <script src="./js/userTable.js"></script>
-    <script src="./js/movie-finder.js"></script>
-    <div class="footer">Dies ist nur ein Schulprojekt.</div>
-    <script src="./js/game.js"></script>
-</body>
-
+            <a href="movie-finder.html">
+            <button type="button">Zurück zum Movie Finder</button>
+            </a>
+         </div>
+      </div>
+      <div class="footer">
+         <div class="footer-content">
+            <div class="social-links">
+               <a href="https://www.instagram.com" target="_blank">
+               <img src="images/instagram.png" alt="Instagram Logo">
+               </a>
+               <a href="https://www.facebook.com" target="_blank">
+               <img src="images/facebook.png" alt="Facebook Logo">
+               </a>
+               <a href="https://www.tiktok.com" target="_blank">
+               <img src="images/tiktok.png" alt="X Logo">
+               </a>
+            </div>
+            <p>Das ist ein Schulprojekt und keine reale Website</p>
+            <p>Anna Arnold, Jamie Stadelmann, Ramona Heini</p>
+         </div>
+      </div>
+      <script src="./js/movie-finder.js"></script>
+   </body>
 </html>

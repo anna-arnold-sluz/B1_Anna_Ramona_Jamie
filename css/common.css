@@ -1,37 +1,12 @@
 /* CSS Code, der für alle Web Pages gleich ist und auf allen Web Pages eingebunden werden muss. */
 
+/*Allgemeine Stile für Body und Content*/
 html,
 body {
   min-height: 100vh;
   margin: 0;
   font-family: Open Sans, Arial, sans-serif;
-}
-
-.content {
-  flex-grow: 1;
-  background-color: #f7f7f7;
-  padding: 0em 5em 2em 5em;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.header-component {
-  flex-grow: 1;
-  height: auto;
-  margin: auto;
-}
-
-.header-image {
-  width: 100vw;
-  height: 25em; 
-  object-fit: cover;
-}
-
-.header-text {
-  position: absolute;
-  top: 30%;
-  left:42.5%;
-  transform: translate(-50%, -50%);
+  background-color: #f8f9fa;
 }
 
 body {
@@ -39,89 +14,171 @@ body {
   flex-direction: column;
 }
 
+.content {
+  flex-grow: 1;
+  padding: 0em 5em 2em 5em;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/*Schriften*/
 h1 {
-  font-size: 5em;
+  font-size: 4.5em;
+  font-weight: 600;
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 2.5em;
+  font-weight: 600;
 }
 
 h3 {
   font-size: 2em;
+  font-weight: 200;
 }
 
 h4 {
   font-size: 1em;
 }
 
-.footer{
-  color: #ffffff;
-  background-color: #8d1a40;
-  height: 4em;
-  display: flex; 
-  align-items: center;
-  justify-content: center;
+p {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 300;
 }
 
-.header{
+a {
+  text-decoration: none;
+}
+
+/*header*/
+.header {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
   padding-left: 1.5%;
   padding-right: 1.5%;
-  height: 4em;
-  background-color: #d4d4d4;
-  }
+  height: 6em;
+  background-color: #f8f9fa;
+}
 
-ul{
+ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
 }
 
-li{
-  padding: 1em; 
+li {
+  padding: 1em;
 }
 
-nav a:focus,
-nav a:hover,
-nav a:active {    
+#navbar a:focus,
+#navbar a:hover,
+#navbar a:active {
   text-decoration: underline;
-  color:#000000;
+  color: #000000;
 }
 
-nav a{
-text-decoration: none;
-color: #8d1a40;
+#navbar a {
+  text-decoration: none;
+  color: #8d1a40;
+  font-weight: 600;
+  font-size: 1.1em;
 }
 
 #navbar a.active {
   color: black;
 }
 
-#logo{
-  width: 5em;
+#logo {
+  width: 7em;
+  margin-left: 100%;
 }
 
-button, #submitButton {
+/*Footer*/
+.footer {
+  background-color: #282828;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer .social-links {
+  margin-bottom: 10px;
+}
+
+.footer .social-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.footer .social-links img {
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+}
+
+.footer .social-links img:hover {
+  transform: scale(1.1);
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+/*header component*/
+.header-component {
+  height: auto;
+  margin: auto;
+}
+
+.header-image {
+  width: 100vw;
+  height: 25em;
+  object-fit: cover;
+  opacity: 50%;
+}
+
+.header-text {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #8d1a40;
+}
+
+/*Button*/
+button,
+.submitButton {
   padding: 20px;
   border: none;
   background-color: rgb(141, 26, 64, 100%);
   color: white;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   font-family: Open Sans, Arial, sans-serif;
   font-size: 1em;
   font-weight: 800;
 }
 
-button:hover, #submitButton:hover {
+button:hover,
+.submitButton:hover {
   background-color: rgb(141, 26, 64, 50%);
   color: black;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
+/*Responsive Design*/
 @media only screen and (max-width: 500px) {
   h1 {
     font-size: 3em;

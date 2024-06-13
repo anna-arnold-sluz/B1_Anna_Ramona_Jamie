@@ -1,53 +1,49 @@
-#formContainer, #resultContainer {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/*Form Container*/
+#formContainer,
+#result {
+  background-color: #ffffff;
+  padding-top: 2%;
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 90%;
-  margin: 20px auto;
+  margin: 10% auto;
 }
 
-#formContainer div, #resultContainer div {
-  margin-bottom: 15px;
+#formContainer div,
+#result div {
+  margin-bottom: 3%;
 }
 
-#formContainer label, #resultContainer label {
-  margin-right: 10px;
-}
-
-#formContainer input[type="email"], #formContainer input[type="submit"] {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+#formContainer label {
+  margin-right: 3%;
 }
 
 #formContainer input[type="submit"] {
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-#formContainer input[type="submit"]:hover {
-  background-color: #218838;
-}
-
-.hidden {
-  display: none;
-}
-
-#resultContainer img {
   display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-top: 20px;
+  margin: auto;
 }
 
-.header-text, h2 {
-    color: white; 
+/*Result Container*/
+#result {
+  padding: 2em;
+}
+
+#result button {
+  display: block;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+/*Schriften*/
+#questionnaireForm p {
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+#movie-finder-error {
+  color: red;
+  font-weight: 600;
 }

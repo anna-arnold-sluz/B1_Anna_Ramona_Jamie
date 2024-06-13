@@ -1,52 +1,68 @@
-.movie-finder-game-flex-container{
+/*Countdown*/
+#countdown {
+  text-align: center;
+  background-color: rgb(141, 26, 64, 50%);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 0.5em;
+  margin: 2em 2em 2em 2em;
+}
+
+/*Movie Finder und Game Verlinkung*/
+.movie-finder-game-flex-container {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.movie-finder-game-flex-container > div {
+.movie-finder-game-flex-container>div {
   padding: 2em;
   justify-content: center;
   text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 0.5em;
+  background-color: white;
 }
 
-.assortment-flex-container{
-  display:flex;
+/*Sortiment*/
+#sortiment {
+  margin-top: 3em;
+}
+
+.assortment-flex-container {
+  display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 3em;
+  margin-bottom: 5em;
 }
 
-.assortment-flex-container > div {
+.assortment-flex-container>div {
   margin: 0.5em;
   justify-content: center;
   text-align: center;
   min-width: 10%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
 }
 
-.images-categories{
+.images-categories {
   max-width: 100%;
 }
 
-#countdown {
-  text-align: center;
-  background-color: rgb(141, 26, 64, 50%);
-  border-radius: 15px;
-}
-
+/*Responsive Design*/
 @media only screen and (max-width: 500px) {
   .movie-finder-game-flex-container {
-    flex-direction:column;
+    flex-direction: column;
   }
-  .assortment-flex-container{
-    flex-direction:column;
+
+  .assortment-flex-container {
+    flex-direction: column;
   }
 }
 
 @media only screen and (max-width: 1200px) {
-  .assortment-flex-container{
-    flex-direction:column;
+  .assortment-flex-container {
+    flex-direction: column;
   }
 }

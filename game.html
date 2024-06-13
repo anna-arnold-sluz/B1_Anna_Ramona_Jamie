@@ -1,109 +1,131 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Game</title>
-  <link rel="stylesheet" href="./css/common.css" />
-  <link rel="stylesheet" href="./css/game.css" />
-</head>
-
-<body>
-  <header>
-    <nav class="header">
-      <div>
-        <a href="index.html"><img id="logo" src="images/logo.png"></a>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Game</title>
+      <link rel="stylesheet" href="./css/common.css" />
+      <link rel="stylesheet" href="./css/game.css" />
+   </head>
+   <body>
+      <header>
+         <nav class="header">
+            <div>
+               <a href="index.html"><img id="logo" src="images/logo.png"></a>
+            </div>
+            <div>
+               <ul id="navbar">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="movie-finder.html">Movie Finder</a></li>
+                  <li><a href="game.html" class="active">Game</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <div class="header-component">
+         <img class="header-image" src="images/header-game.jpg" alt="Hogwarts Express">
+         <div class="header-text">
+            <h1>Harry Potter Game</h1>
+         </div>
       </div>
-      <div>
-        <ul id="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="movie-finder.html">Movie Finder</a></li>
-          <li><a href="game.html" class="active">Game</a></li>
-        </ul>
+      <div class="content">
+         <div id="game-container">
+            <div id="game-info">
+               <h3>Willkommen beim Harry Potter Game</h3>
+               <p>
+                  Hilf Harry, den Dementoren auszuweichen! Nutze dazu die nach-pben Pfeiltaste, um Harry höher fliegen zu lassen.<br />
+                  Erreiche minestens 100 Punkte, um an unserem Gewinnspiel teilzunehmen und mit ein bisschen Glück einen Gutschein für einen Film zu
+                  gewinnen!
+               </p>
+            </div>
+            <div id="game">
+               <div id="game-start">
+                  <div class="startScreenText">Klicke, um das Spiel zu starten.</div>
+               </div>
+               <div id="game-background"></div>
+               <div id="game-character"></div>
+               <div id="game-score">0</div>
+            </div>
+            <div id="game-end" class="hidden">
+               <div id="game-winner" class="hidden">
+                  <h3> ⭐ ⭐ ⭐ Glückwunsch ⭐ ⭐ ⭐ </h3>
+                  <p>Du hast mehr als 100 Punkte erzielt. Fülle das Formular aus um am Wettbewerb teilzunehmen!</p>
+               </div>
+               <div id="game-loser" class="hidden">
+                  <p>Oh nein! Leider hast du noch nicht 100 Punkte erreicht. Klicke auf das Spiel, um es erneut zu versuchen!</p>
+               </div>
+            </div>
+         </div>
+         <form id="form" class="hidden">
+            <div id="formAddress">
+               <label for="address" class="label">Anrede*</label><br>
+               <input type="radio" id="male" name="address" value="Herr">
+               <label for="male">Herr</label><br>
+               <input type="radio" id="female" name="address" value="Frau">
+               <label for="male">Frau</label><br>
+               <input type="radio" id="diverse" name="address" value="Divers">
+               <label for="male">Divers</label><br>
+               <span class="error-message hidden" id="address-error">Bitte wähle eine Andrede aus</span>
+            </div>
+            <div id="formName">
+               <div id="formFirstName">
+                  <label for="firstName" class="label">Vorname*</label><br>
+                  <input type="text" id="firstName" name="firstName"><br>
+                  <span class="error-message hidden" id="first-name-error">Bitte gib deinen Vornamen ein</span>
+               </div>
+               <div id="formLastName">
+                  <label for="lastName" class="label">Nachname*</label><br>
+                  <input type="text" id="lastName" name="lastName"><br>
+                  <span class="error-message hidden" id="last-name-error">Bitte gib deinen Nachnamen ein</span>
+               </div>
+            </div>
+            <div id="formContact">
+               <div id="formEmail">
+                  <label for="email" class="label">E-Mail*</label><br>
+                  <input type="text" id="email" name="email"><br>
+                  <span class="error-message hidden" id="email-error">Bitte gib eine gültige E-Mail Adresse ein</span>
+               </div>
+               <div id="formPhone">
+                  <label for="phone" class="label">Telefon*</label><br>
+                  <input type="text" id="phone" name="phone" placeholder="+12 12 123 12 12" onkeypress="addSpace()"><br>
+                  <span class="error-message hidden" id="phone-error">Bitte gib eine gültige Telefonnummer ein</span>
+               </div>
+            </div>
+            <div id="formAGB">
+               <input type="checkbox" id="agb" name="agb" value="agb-accepted">
+               <label for="AGB">Hiermit akzeptiere ich die AGB für den Wettbewerb</label><br>
+               <span class="error-message hidden" id="agb-error">Bitte akzeptiere die AGB</span>
+            </div>
+            <div id="formSubmit">
+               <input type="submit" class="submitButton" id="submitButton" name="submitButton" value="Submit">
+            </div>
+         </form>
+         <div id="thank-you-text" class="hidden">
+            <h3>Danke!</h3>
+            <p>
+               Deine Eingabe wurde übermittelt. Falls du zu den Gewinnern gehörst, wirst du per E-Mail benachrichtigt. Wir wünschen dir viel Glück!
+            </p>
+         </div>
       </div>
-    </nav>
-  </header>
-  <div class="header-component">
-    <img class="header-image" src="images/header-game.jpg" alt="Hogwarts Express">
-    <div class="header-text">
-      <h1>Harry Potter Game</h1>
-    </div>
-  </div>
-  <div class="content">
-    <div id="game-container">
-      <div id="game-info">
-        Drücke eine Taste, um zu springen.<br />
-        Weiche den Steinen aus.<br />
-        Erreiche 100 Punkte, um am Gewinnspiel teilzunehmen und mit ein bisschen Glück einen Gutschein für einen Film zu
-        gewinnen!
+      <div class="footer">
+         <div class="footer-content">
+            <div class="social-links">
+               <a href="https://www.instagram.com" target="_blank">
+               <img src="images/instagram.png" alt="Instagram Logo">
+               </a>
+               <a href="https://www.facebook.com" target="_blank">
+               <img src="images/facebook.png" alt="Facebook Logo">
+               </a>
+               <a href="https://www.tiktok.com" target="_blank">
+               <img src="images/tiktok.png" alt="X Logo">
+               </a>
+            </div>
+            <p>Das ist ein Schulprojekt und keine reale Website</p>
+            <p>Anna Arnold, Jamie Stadelmann, Ramona Heini</p>
+         </div>
       </div>
-
-      <div id="game">
-        <div id="game-start">
-          <div class="startScreenText">Klicke, um das Spiel zu starten.</div>
-        </div>
-        <div id="game-background"></div>
-        <div id="game-dino"></div>
-        <div id="game-rock"></div>
-        <div id="game-score">0</div>
-      </div>
-
-      <div id="game-end" class="hidden">
-        <div id="game-winner" class="hidden">
-          ⭐ ⭐ ⭐ Glückwunsch ⭐ ⭐ ⭐ <br />
-          Du hast mehr als 100 Punkte erzielt. Fülle das Formular aus um am Wettbewerb teilzunehmen!
-        </div>
-        Das Spiel ist zu Ende.<br />
-        Klicke auf das Spiel, um erneut zu spielen.
-      </div>
-    </div>
-
-
-    <form id="form" class="hidden" onsubmit="onClickSubmit">
-      <div id="formAddress">
-        <label for="address" class="label">Anrede*</label><br>
-        <input type="radio" id="male" name="address" value="Herr">
-        <label for="male">Herr</label><br>
-        <input type="radio" id="female" name="address" value="Frau">
-        <label for="male">Frau</label><br>
-        <input type="radio" id="diverse" name="address" value="Divers">
-        <label for="male">Divers</label><br>
-      </div>
-      <div id="formName">
-        <div id="formFirstName">
-          <label for="firstName" class="label">Vorname*</label><br>
-          <input type="text" id="firstName" name="firstName">
-          <span class="error-message hidden" id="firstname-error">First name must be filled out</span>
-        </div>
-        <div id="formLastName">
-          <label for="lastName" class="label">Nachname*</label><br>
-          <input type="text" id="lastName" name="lastName">
-        </div>
-      </div>
-      <div id="formContact">
-        <div id="formEmail">
-          <label for="email" class="label">E-Mail*</label><br>
-          <input type="text" id="email" name="email">
-        </div>
-        <div id="formPhone">
-          <label for="phone" class="label">Telefon*</label><br>
-          <input type="text" id="phone" name="phone" onkeypress="addSpace()">
-        </div>
-      </div>
-
-      <div id="formSubmit">
-        <input type="submit" id="submitButton" name="submitButton" value="Submit">
-      </div>
-    </form>
-
-  </div>
-
-  <div class="footer">Dies ist nur ein Schulprojekt.</div>
-
-  <script src="./js/databaseClient.js"></script>
-  <script src="./js/formValidation.js"></script>
-  <script src="./js/game.js"></script>
-</body>
-
+      <script src="./js/databaseClient.js"></script>
+      <script src="./js/formValidation.js"></script>
+      <script src="./js/game.js"></script>
+   </body>
 </html>

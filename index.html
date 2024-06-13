@@ -1,89 +1,107 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Movie World</title>
-  <link rel="stylesheet" href="./css/common.css" />
-  <link rel="stylesheet" href="./css/index.css" />
-</head>
-
-<body>
-  <header>
-    <div class="header">
-      <div>
-        <a href="index.html"><img id="logo" src="images/logo.png"></a>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Movie World</title>
+      <link rel="stylesheet" href="./css/common.css" />
+      <link rel="stylesheet" href="./css/index.css" />
+   </head>
+   <body>
+      <header>
+         <div class="header">
+            <div>
+               <a href="index.html"><img id="logo" src="images/logo.png"></a>
+            </div>
+            <div id="navbar">
+               <ul>
+                  <li><a href="index.html" class="active">Home</a></li>
+                  <li><a href="movie-finder.html">Movie Finder</a></li>
+                  <li><a href="game.html">Game</a></li>
+               </ul>
+            </div>
+         </div>
+      </header>
+      <div class="header-component">
+         <img class="header-image" src="images/header-home.jpg" alt="Weltkugel">
+         <div class="header-text">
+            <h1>Movie World</h1>
+            <h3>Eine Welt, wo Klassiker zu Abenteuer werden!</h3>
+         </div>
       </div>
-      <nav id="navbar">
-        <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="movie-finder.html">Movie Finder</a></li>
-          <li><a href="game.html">Game</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <div class="header-component">
-    <img class="header-image" src="images/header-home.jpg" alt="Weltkugel">
-    <div class="header-text">
-      <h1>Movie World</h1>
-      <h3>Eine Welt, wo Klassiker zu Abenteuer werden!</h3>
-    </div>
-  </div>
-  <div class="content">
-    <h2 id="countdown"></h2>
-    <h3>Die grosse Eröffnung unseres online Stores!</h3>
-    <p>Unser Movie World Onlineshop geht am 1. Juli 2024 live!
-      Entdecke bereits erste Einblicke auf unserer Webseite und sieh dir an was dich erwarten wird.
-    </p>
-    <br />
-    <div class="movie-finder-game-flex-container">
-      <div>Finde jetzt schon heraus, welcher Film am besten zu dir passt! So brauchst du bei der Store Eröffnung nicht
-        mehr lange überlegen sondern kannst direkt bestellen
-        <br>
-        <br>
-        <a href="https://anna-arnold-sluz.github.io/B1_Anna_Ramona_Jamie/movie-finder.html">
-          <button type="button">Zum Movie Finder</button>
-        </a>
+      <div class="content">
+         <h2 id="countdown"></h2>
+         <h3>Die grosse Eröffnung unseres online Stores!</h3>
+         <p>Unser Movie World Onlineshop geht am 1. Juli 2024 live!
+            Entdecke bereits erste Einblicke auf unserer Webseite und sieh dir an was dich erwarten wird.
+         </p>
+         <br />
+         <div class="movie-finder-game-flex-container">
+            <div>
+               <p>Finde jetzt schon heraus, welcher Film am besten zu dir passt! So brauchst du bei der Store Eröffnung nicht
+                  mehr lange überlegen sondern kannst direkt bestellen
+               </p>
+               <br>
+               <br>
+               <a href="movie-finder.html">
+               <button type="button">Zum Movie Finder</button>
+               </a>
+            </div>
+            <div>
+               <div>
+                  <p>
+                     Du hast Lust auf GEWINNEN? Kein Problem! Spiele unser Harry Potter Game und gewinne mit etwas Können und
+                     etwas Glück einen Harry Potter Film
+                  </p>
+                  <br>
+                  <br>
+                  <a href="game.html">
+                  <button type="button">Zum Harry Potter Game</button>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <h3 id="sortiment">Entdecke unser Sortiment</h3>
+         <div class="assortment-flex-container">
+            <div>
+               <img class="images-categories" src="images/hauptkategorie_action.jpg" alt="Action">
+               <h4>Actionfilme</h4>
+            </div>
+            <div>
+               <img class="images-categories" src="images/hauptkategorie_dokumentation.jpg" alt="Dokumentation">
+               <h4>Dokumentationen</h4>
+            </div>
+            <div>
+               <img class="images-categories" src="images/hauptkategorie_kinder.jpg" alt="Kinder">
+               <h4>Kinderfilme</h4>
+            </div>
+            <div>
+               <img class="images-categories" src="images/hauptkategorie_horror.jpg" alt="Horror">
+               <h4>Horrorfilme</h4>
+            </div>
+            <div>
+               <img class="images-categories" src="images/hauptkategorie_fantasy.jpg" alt="Fantasy">
+               <h4>Fantasyfilme</h4>
+            </div>
+         </div>
       </div>
-      <div>
-        <div>Du hast Lust auf GEWINNEN? Kein Problem! Spiele unser Harry Potter Game und gewinne mit etwas Können und
-          etwas Glück einen Harry Potter Film
-          <br>
-          <br>
-          <a href="https://anna-arnold-sluz.github.io/B1_Anna_Ramona_Jamie/game.html">
-            <button type="button">Zum Harry Potter Game</button>
-          </a>
-        </div>
+      <div class="footer">
+         <div class="footer-content">
+            <div class="social-links">
+               <a href="https://www.instagram.com" target="_blank">
+               <img src="images/instagram.png" alt="Instagram Logo">
+               </a>
+               <a href="https://www.facebook.com" target="_blank">
+               <img src="images/facebook.png" alt="Facebook Logo">
+               </a>
+               <a href="https://www.tiktok.com" target="_blank">
+               <img src="images/tiktok.png" alt="X Logo">
+               </a>
+            </div>
+            <p>Das ist ein Schulprojekt und keine reale Website</p>
+            <p>Anna Arnold, Jamie Stadelmann, Ramona Heini</p>
+         </div>
       </div>
-    </div>
-    <h3>Entdecke unser Sortiment</h3>
-    <div class="assortment-flex-container">
-      <div>
-        <img class="images-categories" src="images/hauptkategorie_action.jpg" alt="Action">
-        <h4>Actionfilme</h4>
-      </div>
-      <div>
-        <img class="images-categories" src="images/hauptkategorie_dokumentation.jpg" alt="Dokumentation">
-        <h4>Dokumentationen</h4>
-      </div>
-      <div>
-        <img class="images-categories" src="images/hauptkategorie_kinder.jpg" alt="Kinder">
-        <h4>Kinderfilme</h4>
-      </div>
-      <div>
-        <img class="images-categories" src="images/hauptkategorie_horror.jpg" alt="Horror">
-        <h4>Horrorfilme</h4>
-      </div>
-      <div>
-        <img class="images-categories" src="images/hauptkategorie_fantasy.jpg" alt="Fantasy">
-        <h4>Fantasyfilme</h4>
-      </div>
-    </div>
-  </div>
-  <div class="footer">Dies ist nur ein Schulprojekt.</div>
-  <script src="./js/index.js"></script>
-</body>
-
+      <script src="./js/index.js"></script>
+   </body>
 </html>

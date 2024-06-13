@@ -1,91 +1,102 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Movie Finder</title>
-  <link rel="stylesheet" href="./css/common.css" />
-  <link rel="stylesheet" href="./css/movie-finder.css" />
-</head>
-
-<body>
-  <header>
-    <nav class="header">
-      <div>
-        <a href="index.html"><img id="logo" src="images/logo.png"></a>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Movie Finder</title>
+      <link rel="stylesheet" href="./css/common.css" />
+      <link rel="stylesheet" href="./css/movie-finder.css" />
+   </head>
+   <body>
+      <header>
+         <nav class="header">
+            <div>
+               <a href="index.html"><img id="logo" src="images/logo.png"></a>
+            </div>
+            <div>
+               <ul id="navbar">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="movie-finder.html" class="active">Movie Finder</a></li>
+                  <li><a href="game.html">Game</a></li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <div class="header-component">
+         <img class="header-image" src="images/header-movie-finder.jpg" alt="Filmrollen">
+         <div class="header-text">
+            <h1>Movie Finder</h1>
+         </div>
       </div>
-      <div>
-        <ul id="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="movie-finder.html" class="active">Movie Finder</a></li>
-          <li><a href="game.html">Game</a></li>
-        </ul>
+      <div class="content">
+         <div id="formContainer">
+            <h3>Welcher Film passt zu dir?</h3>
+            <div>
+               <p>
+                  Beantworte die Fragen und finde heraus, welcher Film am besten zu dir passt. So brauchst du bei der
+                  Shop-Eröffnung nicht mehr lange zu überlegen und kannst direkt bestellen.
+               </p>
+            </div>
+            <br>
+            <form id="questionnaireForm" action="movie-finder-result.html" method="get" onsubmit="return validateForm()">
+               <div>
+                  <p>Welche Film-Kategorie schaust du am liebsten?</p>
+                  <label><input type="radio" name="question1" value="Actionfilm" /> Actionfilm</label><br>
+                  <label><input type="radio" name="question1" value="Fantasyfilm" /> Fantasyfilm</label><br>
+                  <label><input type="radio" name="question1" value="Horrorfilm" /> Horrorfilm</label><br>
+                  <label><input type="radio" name="question1" value="Kinderfilm" /> Kinderfilm</label><br>
+                  <label><input type="radio" name="question1" value="Dokumentarfilm" /> Dokumentarfilm</label><br>
+               </div>
+               <div>
+                  <p>Welche Art von Film schaust du am liebsten?</p>
+                  <label><input type="radio" name="question2" value="Realfilm" /> Reale Filme</label><br>
+                  <label><input type="radio" name="question2" value="Anime" /> Anime</label><br>
+                  <label><input type="radio" name="question2" value="Trickfilm" /> Trickfilme</label><br>
+               </div>
+               <div>
+                  <p>Auf welchem Medium schaust du Filme am liebsten?</p>
+                  <label><input type="radio" name="question3" value="DVD" /> DVD</label><br>
+                  <label><input type="radio" name="question3" value="Streaming" /> Streaming</label><br>
+                  <label><input type="radio" name="question3" value="BlueRay" /> BlueRay</label><br>
+               </div>
+               <div>
+                  <p>In welcher Sprache schaust du Filme am liebsten?</p>
+                  <label><input type="radio" name="question4" value="Deutsch" /> Deutsch</label><br>
+                  <label><input type="radio" name="question4" value="Englisch" /> Englisch</label><br>
+                  <label><input type="radio" name="question4" value="Mandarin" /> Mandarin</label><br>
+                  <label><input type="radio" name="question4" value="Schwedisch" /> Schwedisch</label><br>
+                  <label><input type="radio" name="question4" value="Französisch" /> Französisch</label><br>
+                  <label><input type="radio" name="question4" value="Japanisch" /> Japanisch</label><br>
+                  <label><input type="radio" name="question4" value="Niederländisch" /> Niederländisch</label><br>
+                  <label><input type="radio" name="question4" value="Spanisch" /> Spanisch</label><br>
+                  <label><input type="radio" name="question4" value="Italienisch" /> Italienisch</label><br>
+                  <label><input type="radio" name="question4" value="Koreanisch" /> Koreanisch</label><br>
+               </div>
+               <div id="movie-finder-error" class="hidden">Bitte fülle wähle für jede Frage eine Antwort an</div>
+               <div>
+                  <input type="submit" class="submitButton" value="Zeige meine Filmempfehlung!" />
+               </div>
+            </form>
+         </div>
       </div>
-    </nav>
-  </header>
-  <div class="header-component">
-    <img class="header-image" src="images/Movie-Finder.jpg" alt="Filmrollen">
-    <div class="header-text">
-      <h1>Movie World</h1>
-      <h3>Eine Welt, wo Klassiker zu Abenteuer werden!</h3>
-    </div>
-  </div>
-  <div class="content">
-    <div id="formContainer">
-      <div>Beantworte die Fragen und finde heraus, welcher Film am besten zu dir passt. So brauchst du bei der
-        Shop-Eröffnung nicht mehr lange zu überlegen und kannst direkt bestellen.</div>
-      <br>
-
-      <form id="questionnaireForm" action="movie-finder-result.html" method="get">
-        <div>
-          <p>Welche Film-Kategorie schaust du am liebsten?</p>
-          <label><input type="radio" name="question1" value="Actionfilm" required /> Actionfilm</label> <br>
-          <label><input type="radio" name="question1" value="Fantasyfilm" /> Fantasyfilm</label><br>
-          <label><input type="radio" name="question1" value="Horrorfilm" /> Horrorfilm</label><br>
-          <label><input type="radio" name="question1" value="Kinderfilm" /> Kinderfilm</label><br>
-          <label><input type="radio" name="question1" value="Dokumentarfilm" /> Dokumentarfilm</label><br>
-        </div>
-
-        <div>
-          <p>Welche Art von Film schaust du am liebsten?</p>
-          <label><input type="radio" name="question2" value="Realfilm" required /> Reale Filme</label><br>
-          <label><input type="radio" name="question2" value="Anime" /> Anime</label><br>
-          <label><input type="radio" name="question2" value="Trickfilm" /> Trickfilme</label><br>
-        </div>
-
-        <div>
-          <p>Auf welchem Medium schaust du Filme am liebsten?</p>
-          <label><input type="radio" name="question3" value="DVD" required /> DVD</label><br>
-          <label><input type="radio" name="question3" value="Streaming" /> Streaming</label><br>
-          <label><input type="radio" name="question3" value="BlueRay" /> BlueRay</label><br>
-        </div>
-
-        <div>
-          <p>In welcher Sprache schaust du Filme am liebsten?</p>
-          <label><input type="radio" name="question4" value="Deutsch" required /> Deutsch</label><br>
-          <label><input type="radio" name="question4" value="Englisch" /> Englisch</label><br>
-          <label><input type="radio" name="question4" value="Mandarin" /> Mandarin</label><br>
-          <label><input type="radio" name="question4" value="Schwedisch" /> Schwedisch</label><br>
-          <label><input type="radio" name="question4" value="Französisch" /> Französisch</label><br>
-          <label><input type="radio" name="question4" value="Japanisch" /> Japanisch</label><br>
-          <label><input type="radio" name="question4" value="Niederländisch" /> Niederländisch</label><br>
-          <label><input type="radio" name="question4" value="Spanisch" /> Spanisch</label><br>
-          <label><input type="radio" name="question4" value="Italienisch" /> Italienisch</label><br>
-          <label><input type="radio" name="question4" value="Koreanisch" /> Koreanisch</label><br>
-        </div>
-
-
-        <div>
-          <input type="submit" id="submit" value="Zeige meine Filmempfehlung!" />
-        </div>
-      </form>
-    </div>
-  </div>
-  <div class="footer">Dies ist nur ein Schulprojekt.</div>
-  <script src="./js/userTable.js"></script>
-  <script src="./js/movie-finder.js"></script>
-  <script src="./js/game.js"></script>
-</body>
-
+      <div class="footer">
+         <div class="footer-content">
+            <div class="social-links">
+               <a href="https://www.instagram.com" target="_blank">
+               <img src="images/instagram.png" alt="Instagram Logo">
+               </a>
+               <a href="https://www.facebook.com" target="_blank">
+               <img src="images/facebook.png" alt="Facebook Logo">
+               </a>
+               <a href="https://www.tiktok.com" target="_blank">
+               <img src="images/tiktok.png" alt="X Logo">
+               </a>
+            </div>
+            <p>Das ist ein Schulprojekt und keine reale Website</p>
+            <p>Anna Arnold, Jamie Stadelmann, Ramona Heini</p>
+         </div>
+      </div>
+      <script src="./js/movie-finder.js"></script>
+      <script src="./js/game.js"></script>
+   </body>
 </html>
