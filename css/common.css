@@ -96,7 +96,7 @@ li {
 
 #logo {
   width: 7em;
-  margin-left: 100%;
+  margin-left: 50%;
 }
 
 /*Footer*/
@@ -151,7 +151,7 @@ li {
 .header-text {
   position: absolute;
   text-align: center;
-  top: 30%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #8d1a40;
