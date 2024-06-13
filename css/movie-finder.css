@@ -47,3 +47,32 @@
   color: red;
   font-weight: 600;
 }
+
+@media only screen and (max-width: 500px) {
+
+  #formContainer,
+  #result {
+    padding-top: 5%;
+    padding-right: 5;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    margin: 5% auto;
+  }
+
+  #formContainer div,
+  #result div {
+    margin-bottom: 5%;
+  }
+
+  #formContainer label {
+    display: block;
+    margin-bottom: 1%;
+    margin-right: 0;
+  }
+
+  #formContainer input[type="submit"],
+  #result button {
+    width: 100%;
+    font-size: 0.9em;
+  }
+}

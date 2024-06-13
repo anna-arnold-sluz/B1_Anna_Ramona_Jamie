@@ -52,11 +52,32 @@
 
 /*Responsive Design*/
 @media only screen and (max-width: 500px) {
+
+  #untertitel {
+    font-size: 1em;
+  }
+
   .movie-finder-game-flex-container {
     flex-direction: column;
   }
 
+  .movie-finder-game-flex-container>div {
+    margin: 1em 0;
+    padding: 1em;
+  }
+
   .assortment-flex-container {
     flex-direction: column;
+  }
+
+  .assortment-flex-container>div {
+    margin: 1em 0;
+    min-width: 80%;
+    padding: 1em;
+  }
+
+  #countdown {
+    margin: 1em 1em 1em 1em;
+    padding: 1em;
   }
 }

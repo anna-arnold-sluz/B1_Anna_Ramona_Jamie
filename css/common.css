@@ -180,7 +180,54 @@ button:hover,
 
 /*Responsive Design*/
 @media only screen and (max-width: 500px) {
+
   h1 {
-    font-size: 3em;
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  .content {
+    padding: 0em 1em 2em 1em;
+  }
+
+  .header {
+    height: auto;
+    justify-content: left;
+  }
+
+  ul {
+    padding: 0;
+    padding-left: 2em;
+  }
+
+  li {
+    padding: 0.5em;
+  }
+
+  #logo {
+    margin-left: 0;
+    width: 5em;
+  }
+
+  .header-image {
+    height: 15em;
+  }
+
+  .header-text {
+    top: 20%;
+    font-size: 1.2em;
+  }
+
+  button,
+  .submitButton {
+    padding: 15px;
+    font-size: 0.9em;
   }
 }
