@@ -54,7 +54,7 @@
 @media only screen and (max-width: 500px) {
 
   #untertitel {
-    font-size: 1em;
+    display: none;
   }
 
   .movie-finder-game-flex-container {
